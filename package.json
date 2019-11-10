@@ -3,8 +3,10 @@
 	"displayName": "SmartCopy",
 	"description": "Customize path copying",
 	"version": "0.0.1",
+	"publisher": "evanraalte",
+	"repository": "https://github.com/evanraalte/smartCopy",
 	"engines": {
-		"vscode": "^1.30.0"
+		"vscode": "^1.40.0"
 	},
 	"categories": [
 		"Other"
