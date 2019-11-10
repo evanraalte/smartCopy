@@ -10,16 +10,41 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.smartcopy"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.smartcopy",
+				"title": "Copy Unix path"
 			}
-		]
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.smartcopy",
+					"group": "6_copypath"
+				}
+			],
+			"editor/title/context": [
+				{
+					"command": "extension.smartcopy",
+					"group": "6_copypath"
+
+				}
+			]
+		},
+		"configuration" :{
+			"title": "Smart copy",
+			"properties": {
+				"smartCopy.prefix" :{
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Set the prefix for a unix copy"
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
